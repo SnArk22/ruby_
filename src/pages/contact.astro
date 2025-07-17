@@ -1,0 +1,22 @@
+---
+import '../styles/global.css';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+const pageTitle = 'Contact';
+---
+
+<Layout>
+    <Header />
+
+    <body>
+        <h1>{pageTitle}</h1>
+        <p>If you would like to get in touch, please email me at: <a href="mailto: ruby.mykkanen@gmail.com">ruby.mykkanen@gmail.com</a></p>
+        <p>Or follow me on <a href="link to my insta">Instagram</a> to keep updated!</p>
+
+        <Footer/ >
+        <script>
+            import "../scripts/menu.js";
+        </script>
+    </body>
+</Layout>  
