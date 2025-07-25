@@ -1,13 +1,23 @@
 html {
-  background-color: #f1f5f9;
+  background-color: #FDE9D8;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
   margin: 0 auto;
   width: 100%;
   max-width: 80ch;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   line-height: 1.5;
+}
+.main-content {
+  flex: 1;
 }
 
 * {
@@ -18,12 +28,15 @@ h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
   font-family: 'oswald', sans-serif;
+  color: #E36414;
 }
 
 h2 {
   margin: 1rem 0;
   font-size: 1.5rem;
   font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #FB8B24;
 }
 h3 {
   margin: 0.5rem 0;
@@ -39,6 +52,13 @@ h4 {
 p {
   margin: 0.5rem 0;
   font-family: 'Cutive Mono', monospace;
+  color: #0F4C5C;
+}
+
+li {
+  margin: 0.5rem 0;
+  font-family: 'Cutive Mono', monospace;
+  color: #9A031E;
 }
 
 ::selection {
@@ -63,7 +83,7 @@ p {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #b0c8f8;
+  background-color: #FB8B24;
   display: none;
   margin: 0;
 }
@@ -77,18 +97,18 @@ p {
   font-family: 'cutive mono', monospace;
   font-weight: bold;
   text-transform: uppercase;
-  color: #77293b;
+  color: #FB8B24;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #77293b;
-  color: #ffffff;
+  background-color: #FB8B24;
+  color: #FDE9D8;
 }
 
 .nav-links a:active {
-  background-color: #77293b;
-  color: #ffffff;
+  background-color: #FB8B24;
+  color: #FDE9D8;
 }   
 
 .expanded {
@@ -115,3 +135,92 @@ p {
 
 }
 
+.submitButton {
+  background-color: #708D81;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-family: "abril fatface", serif;
+  font-size: 1rem;
+}
+
+.emailLabel {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1rem;
+  color: #9A031E;
+}
+
+.emailBox {
+  padding: 0.5rem;
+  border: 1px solid #708D81;
+  color:#710727;
+  border-radius: 0.25rem;
+  width: 100%;
+  max-width: 300px;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.link {
+    text-decoration: none;
+    color: #710727;
+    font-family: 'Cutive Mono', monospace;
+}
+
+.link:hover {
+    color: #9A031E;
+    text-decoration: underline;
+}
+
+
+.social-link {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link a {
+  text-decoration: none;
+  color: #710727;
+  font-family: 'Cutive Mono', monospace;
+}
+
+.social-link a:hover {
+  color: #FB8B24;
+  text-decoration: underline;
+}
+
+img {
+  max-width: 25px;
+  height: auto;
+  align-items: center;
+  margin-right: 10px;
+  margin-left: auto;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.footer {
+  width: 100vw;           /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Center the box if your content is centered */
+  margin-right: calc(-50vw + 50%); /* Optional: ensures full width on both sides */
+  margin-bottom: calc(-40vh + 50%); /* Optional: centers vertically if needed */
+  padding: 2rem;
+  background-color: #708D81;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.name {
+    font-family: 'Abril Fatface', serif;
+    color: #0F4C5C;
+    font-size: 5rem;
+    margin-right: 10px;
+}

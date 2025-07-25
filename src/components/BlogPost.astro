@@ -1,0 +1,11 @@
+---
+const { title, url } = Astro.props;
+const postDate = new Date(url.split('/').pop().replace('.md', '')).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+});
+---
+<li><a href={url}>{title}</a></li>
+<p> Published: {Date}</p>
+

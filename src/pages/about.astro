@@ -25,37 +25,35 @@ const textCase = "uppercase";
 ---
 
 <Layout>
-    <Header />
 
     <style define:vars={{skillColor, fontWeight, textCase}}>
         
     </style>
 
     <body>
-        <h1 class = "name">Ruby Mykkanen</h1>
-        <h1>{pageTitle}</h1>
-        <h2>my goals, aspirations, ideas, and interests</h2>
+        <div class = "main-content">
+            <h1>{pageTitle}</h1>        
+            <h1 class = "name">Ruby Mykkanen</h1>
 
-        <p>Here are a few facts about me:</p>
-        <ul>
-        <li>My name is {identity.firstName}.</li>
-        <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-        {identity.hobbies.length >= 2 &&
-            <li>Two of my hobbies are: {identity.hobbies[2]} and {identity.hobbies[1]}</li>
-        }
-        </ul>
-        <p>My skills are:</p>
-        <ul>
-        {skills.map((skill) => <li class = "skill">{skill}</li>)}
-        </ul>
-        {happy && <p>I am happy to be learning Astro!</p>}
+            <h2>my goals, aspirations, ideas, and interests</h2>
 
-        {finished && <p>I finished this tutorial!</p>}
+            <p>Here are a few facts about me:</p>
+            <ul>
+            <li>My name is {identity.firstName}.</li>
+            <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
+            {identity.hobbies.length >= 2 &&
+                <li>Two of my hobbies are: {identity.hobbies[2]} and {identity.hobbies[1]}</li>
+            }
+            </ul>
+            <p>My skills are:</p>
+            <ul>
+            {skills.map((skill) => <li class = "skill">{skill}</li>)}
+            </ul>
+            {happy && <p>I am happy to be learning Astro!</p>}
 
-        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-        <Footer/ >
-        <script>
-            import "../scripts/menu.js";
-        </script>
+            {finished && <p>I finished this tutorial!</p>}
+
+            {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+        </div>
     </body>
 </Layout>

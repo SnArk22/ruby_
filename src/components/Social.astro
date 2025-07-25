@@ -1,7 +1,25 @@
 ---
-const { platform, username } = Astro.props;
+const { platform, username } = Astro.props as {
+    platform: keyof typeof icons;
+    username: string;
+}
+
+type Platform = 'instagram' | 'github' | 'youtube';
+
+import githubIcon from '../assets/github.svg';
+import instagramIcon from '../assets/instagram.svg';
+import youtubeIcon from '../assets/youtube.svg';
+
+const icons = {
+  instagram: instagramIcon,
+  github: githubIcon,
+  youtube: youtubeIcon,
+};
 ---
-<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+<div class = "social-link">
+    <img src={icons[platform].src} alt={`${platform} icon`} />
+    <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+</div>
 
 <style>
     footer {
@@ -12,8 +30,9 @@ const { platform, username } = Astro.props;
     }
     
     footer a {
-        color: #007bff;
+        color: #8D0801;
         text-decoration: none;
+        font-family: "cutive mono", monospace;
     }
     
     footer a:hover {
