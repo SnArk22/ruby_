@@ -3,12 +3,20 @@ import Layout from '../layouts/Layout.astro';
 const { frontmatter } = Astro.props;
 ---
 <Layout pageTitle={frontmatter.title}>
-    <p>Written by {frontmatter.author}</p>
-    <p>Published on: {frontmatter.pubDate.toString().slice(0,10)}</p>
+    <p>By {frontmatter.author}</p>
+    <p>{frontmatter.pubDate.toLocaleDatetring()}</p>
     <p>{frontmatter.description}</p>
     <img src={frontmatter.image.src} alt={frontmatter.image.alt} />
     <p>Tags: {frontmatter.tags.join(', ')}</p>
     <article>
-    <slot />
+        <slot />
     </article>
+
+    <div class="tags">
+        {frontmatter.tags.map((tag: string) => (
+        <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
+        ))}
+    </div>
+
+
 </Layout>

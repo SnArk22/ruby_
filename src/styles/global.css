@@ -224,3 +224,42 @@ img {
     font-size: 5rem;
     margin-right: 10px;
 }
+
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag {
+    margin: 0.25em;
+    border: dotted 5px #FB8B24;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #708D81;
+}
+
+a {
+    color: #0F4C5C;
+    text-decoration: underline;
+}
+
+html.dark {
+  background-color: #0F4C5C;
+  color: #FDE9D8;
+}
+
+.dark a {
+  color: #FDE9D8;
+}
+
+.dark li {
+  color: #a1cab9;
+}
+.dark p{
+    color: #a1cab9;
+}
+.dark h1 {
+  color: #FDE9D8;
+}

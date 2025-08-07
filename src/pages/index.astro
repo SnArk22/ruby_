@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Greeting from '../components/Greeting';
 const pageTitle = "Home Page";
 ---
 <Layout pageTitle = {pageTitle}>
 	<div class="main-content">
   		<h2>My awesome blog subtitle</h2>
+		  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 	</div>
 </Layout>
