@@ -1,10 +1,17 @@
-	---
-    ---
-    <div class = "nav-links">
-        <a href="/" >Home</a>
-        <a href="/about/" >About</a>
-        <a href="/projects/" >Projects</a>
-        <a href="/contact/" >Contact</a>
-        <a href="/newsletter/" >Newsletter</a>
-        <a href="/tags/" >Tags</a>
-    </div>
+---
+
+---
+<div class = "nav-links" id = "nav-links">
+    <a href="/" >Home</a>
+    <a href="/about/" >About</a>
+    <a href="/projects/" >Projects</a>
+    <a href="/contact/" >Contact</a>
+    <a href="/newsletter/" >Newsletter</a>
+    <a href="/tags/" >Tags</a>
+</div>
+
+<script type="text/javascript">
+  document.getElementById('hamburger').onclick = function() {
+    document.getElementById('navLinks').classList.toggle('expanded');
+  }
+</script>

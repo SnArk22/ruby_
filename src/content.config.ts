@@ -3,12 +3,14 @@ import { glob } from "astro/loaders";
 // Import utilities from `astro:content`
 import { z, defineCollection } from "astro:content";
 // Define a `loader` and `schema` for each collection
-const newsletter = defineCollection({
-    loader: glob({ pattern: '**/[^_]*.md', base: "./src/newsletter" }),
+const projects = defineCollection({
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/projects" }),
     schema: z.object({
       title: z.string(),
       pubDate: z.date(),
-      description: z.string(),
+      completionDate: z.date(),
+      collaborators: z.string().optional(),
+      abstract: z.string(),
       author: z.string(),
       image: z.object({
         url: z.string(),
@@ -18,4 +20,4 @@ const newsletter = defineCollection({
     })
 });
 // Export a single `collections` object to register your collection(s)
-export const collections = { newsletter };
+export const collections = { projects };

@@ -7,14 +7,19 @@ html, body {
 }
 
 body {
-  margin: 0 auto;
+  
   width: 100%;
-  max-width: 80ch;
+  max-width: 100ch;
   min-height: 100vh;
+  top: 200px;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
   line-height: 1.5;
+  margin: 0 auto;
+
+  align-content: center;
+
+  margin-top: 6%;
 }
 .main-content {
   flex: 1;
@@ -73,23 +78,29 @@ li {
 
 .hamburger .line {
   display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #251f58;
+  width: 20px;
+  height: 3px;
+  margin: 5px;
+  background-color: rgba(37, 31, 88, 0.3);
 }
 
 .nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #FB8B24;
   display: none;
-  margin: 0;
+  flex-direction: column;
+  top: 65px;
+  left: 0px;
+  width: 30%;
+  background-color: rgba(37, 31, 88, 0.5);
+  position: absolute;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.nav-links.expanded {
+  display: flex;
 }
 
 .nav-links a {
-  display: block;
   text-align: center;
   padding: 10px 0;
   text-decoration: none;
@@ -97,7 +108,7 @@ li {
   font-family: 'cutive mono', monospace;
   font-weight: bold;
   text-transform: uppercase;
-  color: #FB8B24;
+  color: #FDE9D8;
 }
 
 .nav-links a:hover,
@@ -107,7 +118,7 @@ li {
 }
 
 .nav-links a:active {
-  background-color: #FB8B24;
+  background-color: #0F4C5C;
   color: #FDE9D8;
 }   
 
@@ -118,13 +129,15 @@ li {
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 2em;
-    display: block;
+    display: flex;
+    flex-direction: row;
     position: static;
     width: auto;
     background: none;
   }
 
   .nav-links a {
+    color: #FB8B24;
     display: inline-block;
     padding: 15px 20px;
   }
@@ -205,17 +218,22 @@ img {
 }
 
 .footer {
-  width: 100vw;           /* Full viewport width */
-  margin-left: calc(-50vw + 50%); /* Center the box if your content is centered */
-  margin-right: calc(-50vw + 50%); /* Optional: ensures full width on both sides */
-  margin-bottom: calc(-40vh + 50%); /* Optional: centers vertically if needed */
+  position: relative;  
+  width: 100vw; 
+  margin-left: -50vw;
+  margin-right: -50vw;
+  left: 50%;
+  right: 50%;    
   padding: 2rem;
   background-color: #708D81;
   text-align: center;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  box-sizing: border-box;
+  justify-content: center;
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 50px;
+  bottom: 0;
+
 }
 
 .name {
@@ -262,4 +280,39 @@ html.dark {
 }
 .dark h1 {
   color: #FDE9D8;
+}
+
+.blog-logo-title {
+  font-family: 'Abril Fatface', serif;
+  font-weight: bold;
+  display: block;
+  padding: 15px;
+  align-items: right;
+  font-size: 1.5rem;
+  color: #710727;
+  margin: 0;
+  text-decoration: none;
+}
+
+.blog-logo {
+  width: 100px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #f4c6a1;
+}
+
+.Project_image {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem 0;
 }

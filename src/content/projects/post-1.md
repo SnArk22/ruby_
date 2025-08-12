@@ -1,11 +1,14 @@
 ---
-title: 'Post.1'
+title: Post.1
 pubDate: 2022-07-01
-description: 'This is the first post of my new Astro blog.'
-author: 'Astro Learner'
+completionDate: 2025-07-09
+abstract: This is the first post of my new Astro blog.
+author: Astro Learner
+collaborators: Jeff
+slug: 3-D Print
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    url: 'https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-Hamburger-april-new-image:nutrition-calculator-tile?wid=822&hei=822&dpr=off'
+    alt: The Astro logo on a dark background with a pink glow.
 tags: ["astro", "blogging", "learning in public", "Dark Magic"]
 ---
 
