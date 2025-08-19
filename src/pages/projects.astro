@@ -1,18 +1,18 @@
 ---
 import { getCollection } from "astro:content";
 import Layout from '../layouts/Layout.astro';
-import BlogPost from '../components/BlogPost.astro';
+import ProjectPost from '../components/ProjectPost.astro';
 
 const pageTitle = 'My Projects';
-const allPosts = await getCollection("project");
+const allPosts = await getCollection("projects");
 ---
 
 <Layout>
     <div class="main-content">
         <h1>{pageTitle}</h1>
-        <ul>
+        <ul class="project-list">
             {allPosts.map(
-                (post) => <BlogPost url={`/posts/${post.id}/`} title={post.data.title} />
+                (post) => <ProjectPost frontmatter={post.data}/>
                 )
                 }
          </ul>

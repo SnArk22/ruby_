@@ -1,59 +1,41 @@
 ---
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 
 const pageTitle = 'About Me';
 
-const identity = {
-  firstName: "Ruby",
-  country: "The United States",
-  occupation: "barista and student",
-  hobbies: ["painting", "music", "biking"],
-};
-
-const skills = ["HTML", "CSS", "Python", "Rust", "Astro", "Writing"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
 <Layout>
 
-    <style define:vars={{skillColor, fontWeight, textCase}}>
-        
-    </style>
-
     <body>
+        
+        <img src="../assets/RubyPhoto.png" alt="Ruby Mykkanen" class="profile-image"/>
         <div class = "main-content">
-            <h1>{pageTitle}</h1>        
-            <h1 class = "name">Ruby Mykkanen</h1>
+            <h1>{pageTitle}</h1>
+            <p>Hi, I'm Ruby Mykkanen, a future engineer! I'm inspired by learning more about the world I live in, and making creations of my own.</p>
+            <h2>Where I am right now:</h2>
+            <li>I am a freshman at the Massachusetts Institute of Technology</li>
+            <li>I am studying Mechanical Engineering and or Bioengineering</li>
+            <li>I am looking for opportunities to learn more about these fields via real-world experience [see resume for current skillset]</li>
 
-            <h2>my goals, aspirations, ideas, and interests</h2>
+            
 
-            <p>Here are a few facts about me:</p>
-            <ul>
-            <li>My name is {identity.firstName}.</li>
-            <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-            {identity.hobbies.length >= 2 &&
-                <li>Two of my hobbies are: {identity.hobbies[2]} and {identity.hobbies[1]}</li>
-            }
-            </ul>
-            <p>My skills are:</p>
-            <ul>
-            {skills.map((skill) => <li class = "skill">{skill}</li>)}
-            </ul>
-            {happy && <p>I am happy to be learning Astro!</p>}
-
-            {finished && <p>I finished this tutorial!</p>}
-
-            {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
         </div>
     </body>
 </Layout>
+
+<style>
+    li {
+        color: #FB8B24;
+        font-weight: bold;
+    }
+    p {
+        color: #708D81;
+        font-size: 1.2em;
+    }
+    h2 {
+        color: #0F4C5C;
+        font-weight: bold;
+    }
+</style>

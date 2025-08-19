@@ -3,16 +3,17 @@ import { getCollection } from 'astro:content';
 
 
 export async function GET(context) {
-  const posts = await getCollection('newsletter');
+  const posts = await getCollection('projects');
   return rss({
-    title: 'Ruby Mykkanen | Newsletter',
+    title: 'Ruby Mykkanen | Projects',
     description: 'A slice of my life, my work, and my thoughts.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,
-      link: `/posts/${post.id}/`,
+      link: `../posts/${post.id}/`,
+      
     })),
     customData: `<language>en-us</language>`,
   });

@@ -1,8 +1,0 @@
----
-const { frontmatter } = Astro.props;
-const url = `/posts/${frontmatter.slug}`;
----
-<li><a href={url}>{frontmatter.title}</a></li>
-<p> Published: {frontmatter.pubDate}</p>
-<img src={frontmatter.image.url} alt={frontmatter.image.alt} class='Project_image'/>
-
