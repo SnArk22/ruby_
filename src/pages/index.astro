@@ -2,10 +2,21 @@
 import Layout from '../layouts/Layout.astro';
 import Greeting from '../components/Greeting';
 const pageTitle = "Home Page";
+import ProfileImage from '../assets/Profile.jpg';
+import BackgroundImage from '../assets/tree_woodblock.png';
 ---
-<Layout pageTitle = {pageTitle}>
+<Layout pageTitle = {}>
+	<div><img src={BackgroundImage.src} alt="Tree" class="bgimg"/></div>
+	<div class="about-block">
+		<div><img src={ProfileImage.src} alt="Ruby Mykkanen Avatar" class="avatar"/></div>
+			
+		<div>
+			<h1>Ruby Mykkanen</h1>
+	  		<h2>Engineer, Student, Botanist, Musician</h2>
+		</div>
+	</div>
+
 	<div class="main-content">
-  		<h2>My awesome blog subtitle</h2>
 		  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
 	</div>
 </Layout>

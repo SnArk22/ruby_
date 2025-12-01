@@ -1,11 +1,10 @@
 ---
 const { platform, username } = Astro.props as {
     platform: keyof typeof icons;
-    username: keyof typeof icons;
+    username: string;
 }
 
 type Platform = 'instagram' | 'github' | 'Discord' | 'linkedin' | 'Whatsapp';
-type Username = 'ruby.kmykk' | 'SnArk22' | 'ruen42' | 'in/ruby-mykkanen-a4b18035b/' | 'Ruby' ;
 
 import githubIcon from '../assets/github.svg';
 import instagramIcon from '../assets/instagram.svg';

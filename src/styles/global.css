@@ -1,15 +1,26 @@
 html {
-  background-color: #FCF2EE;
+  background-color: #F7F5F3;
 }
 
 html, body {
   height: 100%;
 }
 
+.bgimg {
+  position: absolute;
+  inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;        /* cover the viewport while preserving aspect ratio */
+  z-index: -1;              /* send behind everything */
+  pointer-events: none;     /* allow clicks through the image */
+  opacity: 1;  
+}
+
 body {
   
   width: 100%;
-  max-width: 100ch;
+  max-width: 80%;
   min-height: 100vh;
   top: 200px;
   display: flex;
@@ -31,7 +42,7 @@ body {
 
 h1 {
   margin: 1rem 0;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-family: 'oswald', sans-serif;
   color: #4A5759;
 }
@@ -208,13 +219,18 @@ li {
 }
 
 img {
-  max-width: 25px;
   height: auto;
   align-items: center;
   margin-right: 10px;
   margin-left: auto;
   display: inline-block;
   vertical-align: middle
+}
+
+.blog-logo-link {
+  width: 5px;
+  height: auto;
+  margin-right: 10px;
 }
 
 .footer {
@@ -233,7 +249,17 @@ img {
   gap: 2rem;
   padding-bottom: 50px;
   bottom: 0;
+}
 
+.footer img,
+.footer .footer-icon {
+  width: 40px;           /* desired displayed width */
+  height: 40px;          /* keep equal for square icons, or use 'auto' */
+  max-width: 100%;       /* prevents overflow on very small screens */
+  object-fit: contain;   /* preserve aspect ratio and avoid distortion */
+  margin: 0;             /* reset generic img margins if needed */
+  vertical-align: middle;
+  padding: 10px;
 }
 
 .name {
@@ -285,7 +311,7 @@ html.dark {
 .blog-logo-title {
   font-family: 'Abril Fatface', serif;
   font-weight: bold;
-  display: block;
+  display: flex;
   padding: 15px;
   align-items: right;
   font-size: 1.5rem;
@@ -295,20 +321,36 @@ html.dark {
 }
 
 .blog-logo {
-  width: 100px;
+  width: 30px;
   height: auto;
-  margin-right: 10px;
+  margin: 20px;
 }
 
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.0rem;
   background-color: #DEDBD2;
+  z-index: 10;    
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 2rem;
+}
+
+.accent-text {
+  color: #ED5007;
+  font-family: 'oswald', sans-serif;
+  font-size: 4em;
+  margin: 0px;
 }
 
 .Project_image {
@@ -340,7 +382,38 @@ html.dark {
 }
 
 .Project_image {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 4px;
+}
+
+.profile-image {
+  width: 300px;
+  height: 350px;
+  border-radius: 30%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.about-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main-content,
+.about-block,
+.project-list {
+  position: relative;
+  z-index: 1;
 }
