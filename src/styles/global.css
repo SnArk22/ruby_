@@ -1,5 +1,5 @@
 html {
-  background-color: #FDE9D8;
+  background-color: #FCF2EE;
 }
 
 html, body {
@@ -33,7 +33,7 @@ h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
   font-family: 'oswald', sans-serif;
-  color: #E36414;
+  color: #4A5759;
 }
 
 h2 {
@@ -41,11 +41,12 @@ h2 {
   font-size: 1.5rem;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  color: #FB8B24;
+  color: #ED5007;
 }
 h3 {
   margin: 0.5rem 0;
   font-size: 1.2rem;
+  color: #96B098;
   font-family: 'Lato', sans-serif;
 }
 h4 {
@@ -57,13 +58,13 @@ h4 {
 p {
   margin: 0.5rem 0;
   font-family: 'Cutive Mono', monospace;
-  color: #0F4C5C;
+  color: #2F3537;
 }
 
 li {
   margin: 0.5rem 0;
   font-family: 'Cutive Mono', monospace;
-  color: #9A031E;
+  color: #4A5759;
 }
 
 ::selection {
@@ -108,18 +109,17 @@ li {
   font-family: 'cutive mono', monospace;
   font-weight: bold;
   text-transform: uppercase;
-  color: #FDE9D8;
+  color: #4A5759;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #FB8B24;
-  color: #FDE9D8;
+  color: #ED5007;
 }
 
 .nav-links a:active {
-  background-color: #0F4C5C;
-  color: #FDE9D8;
+  background-color: #4A5759;
+  color: #FCF2EE;
 }   
 
 .expanded {
@@ -137,7 +137,7 @@ li {
   }
 
   .nav-links a {
-    color: #FB8B24;
+    color: #4A5759;
     display: inline-block;
     padding: 15px 20px;
   }
@@ -149,8 +149,8 @@ li {
 }
 
 .submitButton {
-  background-color: #708D81;
-  color: #ffffff;
+  background-color: #96B098;
+  color: #FCF2EE;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.25rem;
@@ -177,12 +177,12 @@ li {
 
 .link {
     text-decoration: none;
-    color: #710727;
+    color: #96B098;
     font-family: 'Cutive Mono', monospace;
 }
 
 .link:hover {
-    color: #9A031E;
+    color: #ED5007;
     text-decoration: underline;
 }
 
@@ -198,12 +198,12 @@ li {
 
 .social-link a {
   text-decoration: none;
-  color: #710727;
+  color: #2F3537;
   font-family: 'Cutive Mono', monospace;
 }
 
 .social-link a:hover {
-  color: #FB8B24;
+  color: #4A5759;
   text-decoration: underline;
 }
 
@@ -225,7 +225,7 @@ img {
   left: 50%;
   right: 50%;    
   padding: 2rem;
-  background-color: #708D81;
+  background-color: #DEDBD2;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -238,7 +238,7 @@ img {
 
 .name {
     font-family: 'Abril Fatface', serif;
-    color: #0F4C5C;
+    color: #4A5759;
     font-size: 5rem;
     margin-right: 10px;
 }
@@ -251,20 +251,20 @@ img {
 
 .tag {
     margin: 0.25em;
-    border: dotted 5px #FB8B24;
+    border: dotted 5px #ED5007;
     border-radius: .5em;
     padding: .5em 1em;
     font-size: 1.15em;
-    background-color: #708D81;
+    background-color: #FCF2EE;
 }
 
 a {
-    color: #0F4C5C;
+    color: #4A5759;
     text-decoration: underline;
 }
 
 html.dark {
-  background-color: #0F4C5C;
+  background-color: #4A5759;
   color: #FDE9D8;
 }
 
@@ -308,7 +308,7 @@ html.dark {
   left: 0;
   width: 100%;
   padding: 0.5rem;
-  background-color: #f4c6a1;
+  background-color: #DEDBD2;
 }
 
 .Project_image {

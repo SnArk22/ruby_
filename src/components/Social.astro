@@ -4,16 +4,20 @@ const { platform, username } = Astro.props as {
     username: string;
 }
 
-type Platform = 'instagram' | 'github' | 'youtube';
+type Platform = 'instagram' | 'github' | 'Discord' | 'linkedin' | 'Whatsapp';
 
 import githubIcon from '../assets/github.svg';
 import instagramIcon from '../assets/instagram.svg';
-import youtubeIcon from '../assets/youtube.svg';
+import discordIcon from '../assets/discord.svg';
+import linkedinIcon from '../assets/linkedin.svg';
+import whatsappIcon from '../assets/whatsapp.svg';
 
 const icons = {
   instagram: instagramIcon,
   github: githubIcon,
-  youtube: youtubeIcon,
+  Discord: discordIcon,
+  linkedin: linkedinIcon,
+  Whatsapp: whatsappIcon
 };
 ---
 <div class = "social-link">
