@@ -93,7 +93,7 @@ li {
   width: 20px;
   height: 3px;
   margin: 5px;
-  background-color: rgba(37, 31, 88, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .nav-links {
@@ -102,7 +102,7 @@ li {
   top: 65px;
   left: 0px;
   width: 30%;
-  background-color: rgba(37, 31, 88, 0.5);
+  background-color: rgba(225, 223, 238, 0.5);
   position: absolute;
   z-index: 1000;
   padding: 1rem;
@@ -335,7 +335,7 @@ html.dark {
   left: 0;
   width: 100%;
   padding: 0.0rem;
-  background-color: #DEDBD2;
+  background-color: #DEDBD275;
   z-index: 10;    
 }
 
@@ -368,21 +368,18 @@ html.dark {
 }
 
 .project-preview {
-  background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 1rem;
   width: 220px;
-  text-align: center;
-  transition: box-shadow 0.2s;
+  text-align: left;
 }
 
 .project-preview:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.16);
+outline: 2px solid #96B098;
 }
 
 .Project_image {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   border-radius: 4px;
 }

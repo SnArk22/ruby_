@@ -7,8 +7,8 @@ author: Astro Learner
 collaborators: Jeff
 slug: project-1
 image:
-    url: 'https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-Hamburger-april-new-image:nutrition-calculator-tile?wid=822&hei=822&dpr=off'
-    alt: The Astro logo on a dark background with a pink glow.
+    url: '../assets/Rev_Illustration_Textured.jpg'
+    alt: a picture
 tags: ["astro", "blogging", "learning in public", "Dark Magic"]
 ---
 
