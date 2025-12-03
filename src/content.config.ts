@@ -4,6 +4,7 @@ import { glob } from "astro/loaders";
 import { defineCollection, z } from 'astro:content';
 
 const projectsCollection = defineCollection({
+  loader: glob({pattern: "project-*.md"}),
   schema: z.object({
     title: z.string(),
     pubDate: z.date(),
