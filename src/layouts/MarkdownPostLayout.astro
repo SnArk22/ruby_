@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 const { frontmatter } = Astro.props;
 ---
 <Layout pageTitle={frontmatter.title}>
+    <p>Slug: {frontmatter.slug}</p>
     <p>Collaborators: {frontmatter.author}, {frontmatter.collaborators}</p>
     <p>Published on {frontmatter.pubDate.toLocaleDateString()}</p>
     <p>Project Completed on {frontmatter.completionDate}</p>

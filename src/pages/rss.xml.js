@@ -1,20 +1,23 @@
 import rss from '@astrojs/rss';
-import { getCollection } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 
+const projectsCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    pubDate: z.date(),
+    completionDate: z.date(),
+    abstract: z.string(),
+    author: z.string(),
+    image: z.object({
+      url: z.string(),
+      alt: z.string(),
+    tags: z.array(z.string()),
+    slug: z.string(), // Add this
+    collaborators: z.string().optional(),
+    }),
+  }),
+});
 
-export async function GET(context) {
-  const posts = await getCollection('projects');
-  return rss({
-    title: 'Ruby Mykkanen | Projects',
-    description: 'A slice of my life, my work, and my thoughts.',
-    site: context.site,
-    items: posts.map((post) => ({
-      title: post.data.title,
-      pubDate: post.data.pubDate,
-      description: post.data.description,
-      link: `../posts/${post.id}/`,
-      
-    })),
-    customData: `<language>en-us</language>`,
-  });
-}
+export const collections = {
+  projects: projectsCollection,
+};

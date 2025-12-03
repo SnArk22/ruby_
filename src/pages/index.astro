@@ -1,12 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Greeting from '../components/Greeting';
 const pageTitle = "Home Page";
 import ProfileImage from '../assets/Profile.jpg';
-import BackgroundImage from '../assets/tree_woodblock.png';
+
 ---
 <Layout pageTitle = {}>
-	<div><img src={BackgroundImage.src} alt="Tree" class="bgimg"/></div>
+
 	<div class="about-block">
 		<div><img src={ProfileImage.src} alt="Ruby Mykkanen Avatar" class="avatar"/></div>
 			
@@ -16,7 +15,19 @@ import BackgroundImage from '../assets/tree_woodblock.png';
 		</div>
 	</div>
 
-	<div class="main-content">
-		  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+	<div class="about-block">
+		<div>
+			<p>I am a freshman student at the Massachusetts Institute of Technology. I plan to pursue a degree in Mechanical and Biological Engineering. 
+			My primary interests lie in: </p>
+			<li>Bioprinting and tissue engineering</li>
+
+			<li>Designing scientific instruments for biological study</li>
+
+			<li>Genetic engineering of plants</li>
+		</div>
+		<div>
+			
+		</div>
 	</div>
+
 </Layout>

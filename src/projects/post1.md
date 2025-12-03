@@ -4,10 +4,9 @@ pubDate: 2022-07-01
 completionDate: 2025-07-09
 abstract: This is the first post of my new Astro blog.
 author: Astro Learner
-collaborators: Jeff
-slug: project-1
+slug: post1
 image:
-    url: '../assets/Rev_Illustration_Textured.jpg'
+    url: '../public/Rev_Illustration_Textured.jpg'
     alt: a picture
 tags: ["astro", "blogging", "learning in public", "Dark Magic"]
 ---

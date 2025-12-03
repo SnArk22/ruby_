@@ -1,5 +1,5 @@
 html {
-  background-color: #F7F5F3;
+  background-color: #EBE8E3;
 }
 
 html, body {
@@ -8,10 +8,13 @@ html, body {
 
 .bgimg {
   position: absolute;
-  inset: 0;                 /* top:0; right:0; bottom:0; left:0; */
+  inset: 0;   
+  top: 0;
+  left: 0;              /* top:0; right:0; bottom:0; left:0; */
   width: 100%;
-  height: 100%;
-  object-fit: cover;        /* cover the viewport while preserving aspect ratio */
+  height: 100vh;
+  object-fit: cover;   
+  object-position: top center;     /* cover the viewport while preserving aspect ratio */
   z-index: -1;              /* send behind everything */
   pointer-events: none;     /* allow clicks through the image */
   opacity: 1;  
@@ -129,7 +132,6 @@ li {
 }
 
 .nav-links a:active {
-  background-color: #4A5759;
   color: #FCF2EE;
 }   
 
@@ -241,7 +243,7 @@ img {
   left: 50%;
   right: 50%;    
   padding: 2rem;
-  background-color: #DEDBD2;
+  background-color: #F7F5F3;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -335,7 +337,7 @@ html.dark {
   left: 0;
   width: 100%;
   padding: 0.0rem;
-  background-color: #DEDBD275;
+  background-color: #ffffff75;
   z-index: 10;    
 }
 

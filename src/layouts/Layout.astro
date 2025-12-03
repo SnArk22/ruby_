@@ -1,11 +1,29 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import BackgroundImage from '../assets/Botany_sketch.png';
 import '../styles/global.css';
 const { pageTitle } = Astro.props;
 
 ---
 <html lang="en">
+  <img src={BackgroundImage.src} alt="bg" class="bgimg" id="bgimg" />
+
+  <script>
+  function fitBgToDocument() {
+    const img = document.getElementById('bgimg');
+    if (!img) return;
+    // set height to total document height so the image spans the whole page
+    img.style.height = document.documentElement.scrollHeight + 'px';
+    img.style.width = '100%';
+    img.style.objectFit = 'cover';
+  }
+
+  window.addEventListener('load', fitBgToDocument);
+  window.addEventListener('resize', fitBgToDocument);
+  // update after images or content load
+  window.addEventListener('DOMContentLoaded', () => setTimeout(fitBgToDocument, 50));
+  </script>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
