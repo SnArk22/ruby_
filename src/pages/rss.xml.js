@@ -1,22 +1,18 @@
 import rss from '@astrojs/rss';
-import { defineCollection, z } from 'astro:content';
+import { getCollection } from 'astro:content';
 
-const projectsCollection = defineCollection({
-  loader: glob({pattern: '../projects/*.md'}),
-  schema: z.object({
-    title: z.string(),
-    pubDate: z.date(),
-    completionDate: z.date(),
-    abstract: z.string(),
-    author: z.string(),
-    image: z.object({ url: z.string(), alt: z.string() }),
-    tags: z.array(z.string()),
-    slug: z.string(), // <- add this so post.data.slug exists
-    collaborators: z.string().optional(),
-    }),
-  })
-
-
-export const collections = {
-  projects: projectsCollection,
-};
+export async function GET(context) {
+    const projects = await getCollection("ProjectIndex");
+  return rss({
+    title: 'Ruby Mykkanen | Projects',
+    description: 'A collection of my projects and experiments.',
+    site: context.site,
+    items: posts.map((project) => ({
+      title: project.data.title,
+      pubDate: project.data.pubDate,
+      description: project.data.description,
+      link: `/projects/${project.id}/`,
+    })),
+    customData: `<language>en-us</language>`,
+  });
+}

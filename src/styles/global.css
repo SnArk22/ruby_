@@ -286,19 +286,20 @@ img {
     margin-right: 10px;
 }
 
-
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .tag {
     margin: 0.25em;
-    border: dotted 5px #ED5007;
     border-radius: .5em;
     padding: .5em 1em;
     font-size: 1.15em;
-    background-color: #FCF2EE;
+    background-color: #96B09860;
+}
+
+.tag-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 a {
