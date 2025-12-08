@@ -2,8 +2,9 @@
 title: Project 3
 pubDate: 2022-07-01
 completionDate: 2025-07-09
-abstract: ...
+description: ...
 author: ...
+collaborators: [none]
 slug: project-3
 image:
   url: '/Rev_Illustration_Textured.jpg'

@@ -11,6 +11,7 @@ const ProjectIndex = defineCollection({
       completionDate: z.date().optional(),
       description: z.string().optional(),
       author: z.string().optional(),
+      collaborators: z.array(z.string()).optional(),
       image: z.object({
         url: z.string(),
         alt: z.string()

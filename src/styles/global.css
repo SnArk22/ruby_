@@ -73,7 +73,7 @@ h4 {
 p {
   margin: 1.5rem 0rem;
   line-height: 2rem;
-  font-size: 1.1rem;
+  font-size: 0.6 rem;
   font-family: 'Cutive Mono', monospace;
   color: #2F3537;
 }
@@ -97,6 +97,7 @@ li {
   font-size: 1rem;
   text-decoration: none;
 }
+
 
 ::selection {
   background-color: #77293b;
@@ -122,7 +123,7 @@ li {
   top: 65px;
   left: 0px;
   width: 30%;
-  background-color: rgba(225, 223, 238, 0.5);
+  background-color: #F7F5F3dd;
   position: absolute;
   z-index: 1000;
   padding: 1rem;
@@ -235,19 +236,11 @@ li {
   color: #ED5007;
 }
 
-img {
-  height: auto;
-  align-items: center;
-  margin-right: 10px;
-  margin-left: auto;
-  display: inline-block;
-  vertical-align: middle
-}
-
 .blog-logo-link {
   width: 5px;
   height: auto;
   margin-right: 10px;
+  margin-top: 7px;
 }
 
 .footer {
@@ -302,9 +295,10 @@ img {
     margin-top: 1rem;
 }
 
+
+
 a {
     color: #4A5759;
-    text-decoration: underline;
 }
 
 html.dark {
@@ -332,6 +326,7 @@ html.dark {
   display: flex;
   padding: 15px;
   align-items: right;
+  
   font-size: 1.5rem;
   color: #710727;
   margin: 0;
@@ -382,31 +377,6 @@ html.dark {
   margin: 1rem 0;
 }
 
-.project-list {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 0;
-}
-
-.project-preview {
-  border-radius: 8px;
-  padding: 1rem;
-  width: 220px;
-  text-align: left;
-}
-
-.project-preview:hover {
-outline: 2px solid #96B098;
-}
-
-.Project_image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
 .profile-image {
   width: 300px;
   height: 350px;
@@ -436,4 +406,54 @@ outline: 2px solid #96B098;
 .project-list {
   position: relative;
   z-index: 1;
+}
+.project-image {
+    max-width: 20%;
+    height: auto;
+    border-radius: 10px;
+    margin: 1.5rem;
+}
+
+.ProjectPostBox {
+    background-color: #F7F5F375;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.ProjectPostBox:hover{
+  background-color: #F7F5F3ee;
+}
+
+.project-desc {
+    text-decoration: none;
+    padding: 1.5rem;
+}
+
+.project-link {
+    text-decoration: none;
+}
+
+.project-title {
+    transition: color 0.3s;
+}
+
+.ProjectPostBox:hover .project-title {
+    color: #a1cab9;
+}
+
+.Project_image {
+    max-height: 25%;
+    max-width: auto;
+    border-radius: 10px;
+    margin-right: 1.5rem;
+}
+
+.project-header {
+    display: flex;
+    align-items: top;
 }

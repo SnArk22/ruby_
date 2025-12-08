@@ -11,7 +11,20 @@ const allProjects = await getCollection("ProjectIndex");
     <div class="main-content">
         <h1>{pageTitle}</h1>
         <div>
-            {allProjects.map((project: any) => <ProjectPost url={`/projects/${project.id}/`} title={project.data.title} />)}
+            {
+            allProjects.map((project) => (
+                <ProjectPost 
+                    url={`/projects/${project.id}/`} 
+                    title={project.data.title} 
+                    img={project.data.image.url}
+                    alt={project.data.image.alt}
+                    description={project.data.description}
+                    tags={project.data.tags}
+
+
+                    />
+            ))
+            }
         </div>
     </div>
 </Layout>
