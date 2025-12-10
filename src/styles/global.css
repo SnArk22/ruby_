@@ -285,6 +285,14 @@ li {
     padding: .5em 1em;
     font-size: 1.15em;
     background-color: #96B09860;
+    width: fit-content;
+    height: fit-content;
+}
+
+.tags {
+    display: flex;
+    margin-bottom: 5%;
+    margin-top: 3%;
 }
 
 .tag-list {
@@ -371,12 +379,6 @@ html.dark {
   margin: 0px;
 }
 
-.Project_image {
-  max-width: 100%;
-  height: auto;
-  margin: 1rem 0;
-}
-
 .profile-image {
   width: 300px;
   height: 350px;
@@ -407,32 +409,21 @@ html.dark {
   position: relative;
   z-index: 1;
 }
-.project-image {
-    max-width: 20%;
-    height: auto;
-    border-radius: 10px;
-    margin: 1.5rem;
+
+.project-previews-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: stretch;  /* <-- add this */
 }
 
-.ProjectPostBox {
-    background-color: #F7F5F375;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    display: inline-flex;
-    flex-direction: row;
-    align-items: flex-start;
-    transition: background-color 0.3s;
-    text-decoration: none;
+@media (max-width: 1000px) {
+  .project-previews-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
-.ProjectPostBox:hover{
-  background-color: #F7F5F3ee;
-}
-
-.project-desc {
-    text-decoration: none;
-    padding: 1.5rem;
-}
 
 .project-link {
     text-decoration: none;
@@ -440,20 +431,97 @@ html.dark {
 
 .project-title {
     transition: color 0.3s;
+    display: block;
+    text-align: center;
+    padding: 0.5rem;
 }
 
-.ProjectPostBox:hover .project-title {
-    color: #a1cab9;
-}
 
 .Project_image {
-    max-height: 25%;
-    max-width: auto;
+    max-width: 40%;
+    max-height: auto;
+
     border-radius: 10px;
     margin-right: 1.5rem;
+    align-self: center;
 }
 
 .project-header {
     display: flex;
-    align-items: top;
+    align-items: center;
+    height: fit-content;
+    padding: 3%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #F8AE8C;
+    border-radius: 10px;
+}
+
+
+.project-abstract {
+    margin-left: 1.5rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-image {
+    max-width: 33.33333%;
+    padding: 0.5rem;
+    height: auto;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.gallery-image:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
+
+.project-post-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.ProjectPostBox {
+  background-color: #F7F5F375;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  text-decoration: none;
+
+  /* changed: use normal flex (not inline-flex) and ensure children stretch */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ProjectPostBox:hover{
+  background-color: #F7F5F3ee;
+}
+
+.project-post-desc {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+
+}
+
+.ProjectPostBox:hover .project-title {
+    color: #F8AE8C;
+}
+
+.project-post-header {
+    max-width: 50%;
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

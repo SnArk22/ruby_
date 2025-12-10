@@ -1,12 +1,12 @@
 ---
-title: Mural aintings
+title: Mural
 pubDate: 2022-07-05
 completionDate: 2024-07-09
 description: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.'
 author: Ruby Mykkanen
 collaborators: 
   - None
-slug: project-3
+slug: project-4
 image:
   url: '/Rev_Illustration_Textured.jpg'
   alt: ...

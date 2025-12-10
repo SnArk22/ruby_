@@ -10,7 +10,7 @@ const allProjects = await getCollection("ProjectIndex");
 
     <div class="main-content">
         <h1>{pageTitle}</h1>
-        <div>
+        <div class="project-previews-list">
             {
             allProjects.map((project) => (
                 <ProjectPost 
@@ -20,8 +20,6 @@ const allProjects = await getCollection("ProjectIndex");
                     alt={project.data.image.alt}
                     description={project.data.description}
                     tags={project.data.tags}
-
-
                     />
             ))
             }

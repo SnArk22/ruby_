@@ -2,17 +2,29 @@
 import Layout from '../layouts/Layout.astro';
 const { frontmatter } = Astro.props;
 ---
-<Layout pageTitle={frontmatter.title}>
+<Layout >
     <div class = "project-header">  
         <img src={frontmatter.image.url} alt={frontmatter.image.alt} class='Project_image'/>
-        <div>
-        <p>Collaborators: {frontmatter.author}, {frontmatter.collaborators}</p>
-        <p>Project Completed on {frontmatter.completionDate}</p>
+        <div class="project-abstract">
+            <h1>{frontmatter.title}</h1>
+            <p>Creator: {frontmatter.author}</p>
+            <p>Collaborators: {frontmatter.collaborators}</p>
+            <p>Project Completed on {frontmatter.completionDate}</p>
         </div>
     </div>
+    
     <article>
         <slot />
     </article>
+
+    <h3>Project Image Gallery</h3>
+    <div class = "gallery">
+        {frontmatter.gallery.map((image: { url: string; alt: string }) => (
+            <img src={image.url} alt={image.alt} class="gallery-image"/>
+        ))}
+    </div>
+
+    <h3>Project Tags</h3>
     <div class="tags">
         {frontmatter.tags.map((tag: string) => (
         <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
