@@ -2,7 +2,7 @@
 title: Mural Paintings
 pubDate: 2022-07-05
 completionDate: 2024-07-09
-description: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project
+description: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project'
 author: Ruby Mykkanen
 collaborators: 
   - None

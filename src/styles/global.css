@@ -482,7 +482,7 @@ html.dark {
 }
 
 .project-post-image {
-    width: 100%;
+    max-width: 50%;
     height: auto;
     object-fit: cover;
     padding: 1rem;
@@ -497,9 +497,11 @@ html.dark {
 
   /* changed: use normal flex (not inline-flex) and ensure children stretch */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 .ProjectPostBox:hover{
@@ -508,7 +510,8 @@ html.dark {
 
 .project-post-desc {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: top;
   padding: 0.5rem;
 
 }
@@ -518,8 +521,7 @@ html.dark {
 }
 
 .project-post-header {
-    max-width: 50%;
-    min-width: 30%;
+  width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
