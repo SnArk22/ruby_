@@ -481,6 +481,11 @@ html.dark {
     transition: transform 0.3s;
 }
 
+.gallery-image:active {
+    transform: scale(2);
+    transition: transform 0.1s;
+}
+
 .project-post-image {
     max-width: 50%;
     height: auto;
@@ -526,4 +531,36 @@ html.dark {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.skills {
+  margin-bottom: 5rem;
+}
+.groups {
+  margin-bottom: 5rem;
+}
+.future {
+  margin-bottom: 5rem;
+}
+
+.toc-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-right: 20px;
+}
+
+.toc-header {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.toc-box {
+  background-color: #F7F5F375;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 50px;
 }

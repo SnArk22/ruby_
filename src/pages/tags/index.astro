@@ -3,12 +3,12 @@ import { getCollection } from "astro:content";
 import Layout from '../../layouts/Layout.astro';
 const allProjects = await getCollection("ProjectIndex");
 const tags = [...new Set(allProjects.map((project: any) => project.data.tags).flat())];
-const pageTitle = 'Tags';
+const pageTitle = 'Projects by Category';
 ---
 
 <Layout pageTitle={pageTitle}>
     <body>
-        <h3>Browse my projects based on category!</h3>
+        <h3>Browse my projects based on their tags!</h3>
             <div class="tag-list">
                 {tags.map((tag) => (
                 <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
