@@ -6,7 +6,7 @@ const { frontmatter } = Astro.props;
     <div class = "project-header">  
         <img src={frontmatter.image.url} alt={frontmatter.image.alt} class='Project_image'/>
         <div class="project-abstract">
-            <h1>{frontmatter.title}</h1>
+            <h2>{frontmatter.title}</h2>
             <p>Creator: {frontmatter.author}</p>
             <p>Collaborators: {frontmatter.collaborators}</p>
             <p>Project Completed on {frontmatter.completionDate}</p>

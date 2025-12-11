@@ -1,8 +1,8 @@
 ---
 title: Learning how to Build Simple Electronic Circuits using Breadboads and Arduino
-pubDate: 2022-07-01
-completionDate: 2025-07-09
-description: 'It all begins with an idea. Maybe you want to launch a business. Maybe you want to turn a hobby into something more. Or maybe you have a creative project to share with the world. Whatever it is, the way you tell your story online can make all the difference.'
+pubDate: 2025-12-11
+completionDate: 2025-12-11
+description: 'In this project, I acqured some basic electronic parts for the purpose of teaching myslef how to make more complex circuits, and integrate computer programming.'
 author: Ruby Mykkanen
 collaborators: 
   - None
@@ -20,8 +20,11 @@ gallery:
 
 tags: ["art", "electronics"]
 ---
-Hello! You have made it to my first project, which actually hapens to be this very website! Still a work in progress, but please feel free to explore around, and submit feedback, telling me what you like and do not like!
+A complete log of my progress and learnings can be found <a href="https://docs.google.com/document/d/1omKobVMDq-ayCLdNuhKVB4PX4agp-n-PIj3rkQeYrP0/edit?usp=sharing">Here</a>
 
-total time taken: __ hrs
+Key skills learned during this project:
+- Working with circuits
+- Coding an arduino
 
-skills used: Astro, Github, JavaScript, HTML, Css, Programming, Graphic Design
+Time spent on this project:
+2 hours
