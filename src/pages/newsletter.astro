@@ -1,16 +1,38 @@
 ---
 import '../styles/global.css';
 import Layout from '../layouts/Layout.astro';
+import NewsletterPost from '../components/NewsletterPost.astro';
+import { getCollection } from "astro:content";
+
 const pageTitle = 'Monthly Newsletter';
+const allLetters = await getCollection("NewsletterIndex");
 
 ---
 
 <Layout>
 
     <body>
+
         <div class="main-content">
             <h1>{pageTitle}</h1>
             <p>Here's where I post a monthly in-depth update on what I've been up to!</p>
+
+            <hr class="divider"/>
+            
+            <div class="newsletter-previews-list">
+                {
+                allLetters.map((letter) => (
+                    <NewsletterPost 
+                        url={`/letters/${letter.id}/`} 
+                        title={letter.data.title} 
+                        img={letter.data.image.url}
+                        alt={letter.data.image.alt}
+                        description={letter.data.description}
+                        />
+                ))
+                }
+            </div>
+
             <p></p>
             <p>If you'd like to recieve an email when this newsletter is updated, please enter your email here:</p>
             <form action="/subscribe" method="POST">

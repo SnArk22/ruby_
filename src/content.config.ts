@@ -23,5 +23,23 @@ const ProjectIndex = defineCollection({
       tags: z.array(z.string())
     })
 });
+
+const NewsletterIndex = defineCollection({
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/NewsletterIndex" }),
+    schema: z.object({
+      title: z.string().optional(),
+      pubDate: z.date().optional(),
+      description: z.string().optional(),
+      author: z.string().optional(),
+      image: z.object({
+        url: z.string(),
+        alt: z.string()
+      }),
+      gallery: z.array(z.object({
+        url: z.string(),
+        alt: z.string()
+      })).optional(),
+    })
+});
 // Export a single `collections` object to register your collection(s)
-export const collections = { ProjectIndex };
+export const collections = { NewsletterIndex, ProjectIndex };

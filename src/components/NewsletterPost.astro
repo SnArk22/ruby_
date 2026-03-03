@@ -1,0 +1,16 @@
+---
+const { title, url, img, alt, description } = Astro.props;
+---
+<a href={url} class="project-link">
+    <div class = "LetterBox">
+        <div class = "letter-post-header">
+            <h3 class = "letter-title">{title}</h3>
+            <p>{description}</p>
+        </div>
+
+        <div class = "letter-post-desc">
+            <img src={img} alt={alt} class="project-post-image" />
+        </div>
+
+    </div>
+</a>

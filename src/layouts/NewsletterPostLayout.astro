@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+const { frontmatter } = Astro.props;
+---
+<Layout >
+    <article>
+        <slot />
+    </article>
+
+    <h3>Image Gallery</h3>
+    <div class = "gallery">
+        {frontmatter.gallery.map((image: { url: string; alt: string }) => (
+            <img src={image.url} alt={image.alt} class="gallery-image"/>
+        ))}
+    </div>
+
+</Layout>
